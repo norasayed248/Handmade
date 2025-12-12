@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E9E3DF">
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="379dp"
+        android:layout_height="137dp"
+        android:layout_marginTop="36dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="Logo"
+        android:scaleType="fitCenter"
+        android:src="@drawable/aura"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Username -->
+
+    <TextView
+        android:id="@+id/tvWelcome"
+        android:layout_width="158dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="serif"
+        android:text="Welcome Back"
+        android:textColor="#111111"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.525"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgLogo" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardUsername"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginTop="24dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="6dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintTop_toBottomOf="@id/tvWelcome"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <EditText
+            android:id="@+id/etUsername"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#F2EEEB"
+            android:hint="User Name"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:textColor="#111111"
+            android:textColorHint="#8B817C"
+            android:inputType="textPersonName"/>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Password -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardPassword"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginTop="14dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="6dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintTop_toBottomOf="@id/cardUsername"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#F2EEEB"
+            android:hint="Password"
+            android:paddingStart="16dp"
+            android:paddingEnd="40dp"
+            android:textColor="#111111"
+            android:textColorHint="#8B817C"
+            android:inputType="textPassword"/>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tvForget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Forget Password?"
+        android:textColor="#2D2724"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@id/cardPassword"
+        app:layout_constraintEnd_toEndOf="@id/cardPassword"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnLogin"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginTop="14dp"
+        android:text="Log in"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:backgroundTint="#111111"
+        app:cornerRadius="12dp"
+        app:elevation="6dp"
+        app:layout_constraintTop_toBottomOf="@id/tvForget"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvSignupHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:text="Don't have an account? Sign Up"
+        android:textColor="#2D2724"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@id/btnLogin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- OR -->
+    <TextView
+        android:id="@+id/tvOr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="OR"
+        android:textColor="#2D2724"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@id/tvSignupHint"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/llSocial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/tvOr"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:src="@drawable/google"
+            android:contentDescription="Google"
+            android:scaleType="fitCenter" />
+
+        <View
+            android:layout_width="50dp"
+            android:layout_height="1dp"/>
+
+        <!-- Facebook -->
+        <ImageView
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:src="@drawable/facebook"
+            android:contentDescription="Facebook" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
