@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="background_light">#E9E3DF</color>
+    <color name="edit_bg">#F2EEEB</color>
+    <color name="border_grey">#D0C9C4</color>
+    <color name="text_dark">#111111</color>
+    <color name="text_hint">#8B817C</color>
+    <color name="button_black">#000000</color>
+    <color name="white">#FFFFFF</color>
+
+
 </resources>

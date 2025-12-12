@@ -1,3 +1,13 @@
 <resources>
-    <string name="app_name">Handmade</string>
+    <string name="logo_desc">AURA Logo</string>
+    <string name="create_account">Create Your Account</string>
+    <string name="hint_name">Name</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_confirm_password">Confirm Password</string>
+    <string name="signup">Sign up</string>
+    <string name="or">OR</string>
+    <string name="google">Google</string>
+    <string name="facebook">Facebook</string>
+
 </resources>
