@@ -1,238 +1,219 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#f5f5f5">
+    android:background="@color/wishlist_background">
+
     <ScrollView
-    android:id="@+id/content_scroll_view"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingStart="16dp"
-    android:paddingEnd="16dp"
-    android:paddingTop="16dp">
-
-    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="My Wishlist" android:textSize="24sp"
-            android:textStyle="bold"
-            android:textColor="#333333" android:gravity="center"
-            android:layout_marginBottom="24dp"
-            android:paddingVertical="8dp"
-            tools:text="My Wishlist" />
-
+        android:layout_height="match_parent"
+        android:padding="16dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginBottom="16dp">
+            android:orientation="vertical">
 
-            <LinearLayout
-                android:layout_width="0dp"
+            <!-- Title -->
+            <TextView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginEnd="8dp"
-                android:background="@android:color/white" android:elevation="2dp"
-                android:orientation="vertical"
-                android:padding="12dp">
+                android:text="@string/wishlist_title"
+                android:textSize="24sp"
+                android:textStyle="normal"
+                android:textColor="@color/wishlist_title_color"
+                android:gravity="center"
+                android:layout_marginBottom="24dp" />
 
-                <ImageView
-                    android:id="@+id/imageNecklace"
-                    android:layout_width="match_parent"
-                    android:layout_height="160dp"
-                    android:background="#e0e0e0" android:scaleType="centerCrop"
-                    android:src="@drawable/neklace" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="Y-SHAPED Necklace" android:textAlignment="center"
-                    android:textColor="@android:color/black" android:textSize="16sp"
-                    android:textStyle="bold"
-                    tools:text="Y-SHAPED Necklace" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:textAlignment="center"
-                    android:text="4.99 (99 reviews)" android:textColor="#666666" android:textSize="14sp"
-                    tools:text="⭐ 4.99 (99 reviews)" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:text="ECP 1500.00" android:textAlignment="center"
-                    android:textColor="#333333" android:textSize="16sp"
-                    android:textStyle="bold"
-                    tools:text="EGP 1499.00" />
-            </LinearLayout>
-
+            <!-- Row 1 -->
             <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginStart="8dp"
-                android:layout_weight="1"
-                android:background="@android:color/white"
-                android:elevation="2dp"
-                android:orientation="vertical"
-                android:padding="12dp">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp">
 
-                <ImageView
-                    android:id="@+id/imageRing"
-                    android:layout_width="match_parent"
-                    android:layout_height="160dp"
-                    android:background="#e0e0e0"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/ring" />
-
-                <TextView
-                    android:layout_width="match_parent"
+                <!-- Necklace -->
+                <LinearLayout
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="Ring Heart" android:textColor="@android:color/black"
-                    android:textAlignment="center"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    tools:text="Ring &quot;Heart&quot;" />
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    android:orientation="vertical">
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:textAlignment="center"
-                    android:text="4.5 (99 reviews)" android:textColor="#666666"
-                    android:textSize="14sp"
-                    tools:text="⭐ 4.99 (114 reviews)" />
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="160dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/neklace"
+                        android:background="@color/wishlist_image_placeholder" />
 
-                <TextView
-                    android:layout_width="match_parent"
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/product_necklace"
+                        android:textAlignment="center"
+                        android:textColor="@color/text_dark"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="8dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/review_499"
+                        android:textAlignment="center"
+                        android:textColor="@color/wishlist_text_secondary"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/price_1500"
+                        android:textAlignment="center"
+                        android:textColor="@color/text_dark"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <!-- Ring -->
+                <LinearLayout
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:text="ECP 1000.00" android:textAlignment="center"
-                    android:textColor="#333333"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    tools:text="EGP 1299.00" />
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="160dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ring"
+                        android:background="@color/wishlist_image_placeholder" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/product_ring"
+                        android:textAlignment="center"
+                        android:textColor="@color/text_dark"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="8dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/review_45"
+                        android:textAlignment="center"
+                        android:textColor="@color/wishlist_text_secondary"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/price_1000"
+                        android:textAlignment="center"
+                        android:textColor="@color/text_dark"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
             </LinearLayout>
+
+            <!-- Row 2 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- Bracelet -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="160dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/bracelet"
+                        android:background="@color/wishlist_image_placeholder" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/product_bracelet"
+                        android:textAlignment="center"
+                        android:textColor="@color/text_dark"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="8dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/review_42"
+                        android:textAlignment="center"
+                        android:textColor="@color/wishlist_text_secondary"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/price_1500"
+                        android:textAlignment="center"
+                        android:textColor="@color/text_dark"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <!-- Earring -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="160dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/earring"
+                        android:background="@color/wishlist_image_placeholder" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/product_earring"
+                        android:textAlignment="center"
+                        android:textColor="@color/text_dark"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="8dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/review_42"
+                        android:textAlignment="center"
+                        android:textColor="@color/wishlist_text_secondary"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/price_500"
+                        android:textAlignment="center"
+                        android:textColor="@color/text_dark"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
         </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginBottom="16dp">
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginEnd="8dp"
-                android:background="@android:color/white"
-                android:elevation="2dp"
-                android:orientation="vertical"
-                android:padding="12dp">
-
-                <ImageView
-                    android:id="@+id/imageBracelet"
-                    android:layout_width="match_parent"
-                    android:layout_height="160dp"
-                    android:background="#e0e0e0"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/bracelet" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="Gold Chain Bracelet" android:textAlignment="center"
-                    android:textColor="@android:color/black"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    tools:text="Gold Chain Bracelet" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:textAlignment="center"
-                    android:text="4.2 (99 reviews)" android:textColor="#666666"
-                    android:textSize="14sp"
-                    tools:text="⭐ 4.2 (50 reviews)" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:text="ECP 1500.00" android:textAlignment="center"
-                    android:textColor="#333333"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    tools:text="EGP 750.00" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginStart="8dp"
-                android:background="@android:color/white"
-                android:elevation="2dp"
-                android:orientation="vertical"
-                android:padding="12dp">
-
-                <ImageView
-                    android:id="@+id/imageEarring"
-                    android:layout_width="match_parent"
-                    android:layout_height="160dp"
-                    android:background="#e0e0e0"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/earring" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="Elegant Earring" android:textColor="@android:color/black"
-                    android:textAlignment="center"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    tools:text="Elegant Earring" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:textAlignment="center"
-                    android:text="4.2 (99 reviews)" android:textColor="#666666"
-                    android:textSize="14sp"
-                    tools:text="⭐ 4.5 (30 reviews)" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:text="ECP 500.00" android:textAlignment="center"
-                    android:textColor="#333333"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    tools:text="EGP 590.00" />
-            </LinearLayout>
-        </LinearLayout>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="56dp" /> </LinearLayout>
-</ScrollView>
+    </ScrollView>
 
 </RelativeLayout>
+
