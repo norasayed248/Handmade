@@ -13,14 +13,16 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.home_page)
+
+
 
         val db = AppDatabase.getInstance(this)
         val repo = MainRepository(db)
 
         lifecycleScope.launch {
 
-            // إدخال يوزر للتجربة
+
             repo.insertUser(
                 UserEntity(
                     name = "Test User",
