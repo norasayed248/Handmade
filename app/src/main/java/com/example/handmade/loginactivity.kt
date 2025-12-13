@@ -22,7 +22,7 @@ class LoginActivity : AppCompatActivity() {
             val password = etPassword.text.toString().trim()
 
             if (username.isBlank() || password.isBlank()) {
-                Toast.makeText(this, "Enter username and password", Toast.LENGTH_SHORT).show() // Toast [web:268]
+                Toast.makeText(this, "Enter username and password", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
 
