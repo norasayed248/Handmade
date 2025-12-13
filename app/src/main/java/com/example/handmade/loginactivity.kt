@@ -2,8 +2,10 @@ package com.example.handmade
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
+import android.widget.EditText
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.button.MaterialButton
 
 class LoginActivity : AppCompatActivity() {
 
@@ -11,11 +13,20 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.login_page)
 
-        val btnLogin = findViewById<Button>(R.id.btnLogin)
+        val etUsername = findViewById<EditText>(R.id.etUsername)
+        val etPassword = findViewById<EditText>(R.id.etPassword)
+        val btnLogin = findViewById<MaterialButton>(R.id.btnLogin)
 
         btnLogin.setOnClickListener {
-            val intent = Intent(this, HomeActivity::class.java)
-            startActivity(intent)
+            val username = etUsername.text.toString().trim()
+            val password = etPassword.text.toString().trim()
+
+            if (username.isBlank() || password.isBlank()) {
+                Toast.makeText(this, "Enter username and password", Toast.LENGTH_SHORT).show() // Toast [web:268]
+                return@setOnClickListener
+            }
+
+            startActivity(Intent(this, HomeActivity::class.java))
             finish()
         }
     }
