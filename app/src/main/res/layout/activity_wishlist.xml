@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@color/wishlist_background">
 
-    <!-- Bottom Nav (ثابت) -->
+    <!-- Bottom Nav  -->
 <!--    <LinearLayout-->
 <!--        android:id="@+id/bottomNav"-->
 <!--        android:layout_width="match_parent"-->
