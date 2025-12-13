@@ -1,145 +1,144 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
-    android:background="@color/background">
+    android:background="#f5f5f5">
+    <ScrollView
+    android:id="@+id/content_scroll_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    android:paddingTop="16dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <!-- Header -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/wishlist_title"
-            android:textSize="24sp"
+            android:text="My Wishlist" android:textSize="24sp"
             android:textStyle="bold"
-            android:textColor="@color/text_primary"
-            android:gravity="center"
+            android:textColor="#333333" android:gravity="center"
             android:layout_marginBottom="24dp"
-            android:padding="5dp"
-            android:elevation="4dp"/>
+            android:paddingVertical="8dp"
+            tools:text="My Wishlist" />
 
-        <!-- Row 1: First 2 items -->
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_marginBottom="16dp">
 
-            <!-- Y-SHAPED Necklace -->
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_marginEnd="8dp"
-                android:background="@color/card_background"
-                android:elevation="2dp"
+                android:background="@android:color/white" android:elevation="2dp"
                 android:orientation="vertical"
                 android:padding="12dp">
 
                 <ImageView
                     android:id="@+id/imageNecklace"
-                    android:layout_width="160dp"
-                    android:layout_height="154dp"
-                    android:background="@color/image_background"
-                    android:padding="4dp"
-                    android:scaleType="centerCrop"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:background="#e0e0e0" android:scaleType="centerCrop"
                     android:src="@drawable/neklace" />
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="@string/item1_title"
-                    android:textColor="@color/item_title"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
+                    android:text="Y-SHAPED Necklace" android:textAlignment="center"
+                    android:textColor="@android:color/black" android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:text="Y-SHAPED Necklace" />
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:text="@string/item1_reviews"
-                    android:textColor="@color/text_secondary"
-                    android:textSize="14sp" />
+                    android:textAlignment="center"
+                    android:text="4.99 (99 reviews)" android:textColor="#666666" android:textSize="14sp"
+                    tools:text="⭐ 4.99 (99 reviews)" />
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:text="@string/item1_price"
-                    android:textColor="@color/price_text"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
+                    android:text="ECP 1500.00" android:textAlignment="center"
+                    android:textColor="#333333" android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:text="EGP 1499.00" />
             </LinearLayout>
 
-            <!-- Ring Heart -->
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_marginStart="8dp"
                 android:layout_weight="1"
-                android:background="@color/card_background"
+                android:background="@android:color/white"
                 android:elevation="2dp"
                 android:orientation="vertical"
                 android:padding="12dp">
 
                 <ImageView
                     android:id="@+id/imageRing"
-                    android:layout_width="158dp"
-                    android:layout_height="154dp"
-                    android:background="@color/image_background"
-                    android:padding="4dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:background="#e0e0e0"
                     android:scaleType="centerCrop"
                     android:src="@drawable/ring" />
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="@string/item2_title"
-                    android:textColor="@color/item_title"
+                    android:text="Ring Heart" android:textColor="@android:color/black"
+                    android:textAlignment="center"
                     android:textSize="16sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    tools:text="Ring &quot;Heart&quot;" />
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:text="@string/item2_reviews"
-                    android:textColor="@color/text_secondary"
-                    android:textSize="14sp" />
+                    android:textAlignment="center"
+                    android:text="4.5 (99 reviews)" android:textColor="#666666"
+                    android:textSize="14sp"
+                    tools:text="⭐ 4.99 (114 reviews)" />
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:text="@string/item2_price"
-                    android:textColor="@color/price_text"
+                    android:text="ECP 1000.00" android:textAlignment="center"
+                    android:textColor="#333333"
                     android:textSize="16sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    tools:text="EGP 1299.00" />
             </LinearLayout>
         </LinearLayout>
 
-        <!-- Row 2: Next 2 items -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_marginBottom="16dp">
 
-            <!-- Gold Chain Bracelet -->
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_marginEnd="8dp"
-                android:background="@color/card_background"
+                android:background="@android:color/white"
                 android:elevation="2dp"
                 android:orientation="vertical"
                 android:padding="12dp">
@@ -148,45 +147,46 @@
                     android:id="@+id/imageBracelet"
                     android:layout_width="match_parent"
                     android:layout_height="160dp"
-                    android:background="@color/image_background"
-                    android:padding="4dp"
+                    android:background="#e0e0e0"
                     android:scaleType="centerCrop"
                     android:src="@drawable/bracelet" />
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="@string/item3_title"
-                    android:textColor="@color/item_title"
+                    android:text="Gold Chain Bracelet" android:textAlignment="center"
+                    android:textColor="@android:color/black"
                     android:textSize="16sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    tools:text="Gold Chain Bracelet" />
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:text="@string/item3_reviews"
-                    android:textColor="@color/text_secondary"
-                    android:textSize="14sp" />
+                    android:textAlignment="center"
+                    android:text="4.2 (99 reviews)" android:textColor="#666666"
+                    android:textSize="14sp"
+                    tools:text="⭐ 4.2 (50 reviews)" />
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:text="@string/item3_price"
-                    android:textColor="@color/price_text"
+                    android:text="ECP 1500.00" android:textAlignment="center"
+                    android:textColor="#333333"
                     android:textSize="16sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    tools:text="EGP 750.00" />
             </LinearLayout>
 
-            <!-- Elegant Earring -->
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_marginStart="8dp"
-                android:background="@color/card_background"
+                android:background="@android:color/white"
                 android:elevation="2dp"
                 android:orientation="vertical"
                 android:padding="12dp">
@@ -195,38 +195,44 @@
                     android:id="@+id/imageEarring"
                     android:layout_width="match_parent"
                     android:layout_height="160dp"
-                    android:background="@color/image_background"
-                    android:padding="4dp"
+                    android:background="#e0e0e0"
                     android:scaleType="centerCrop"
                     android:src="@drawable/earring" />
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="@string/item4_title"
-                    android:textColor="@color/item_title"
+                    android:text="Elegant Earring" android:textColor="@android:color/black"
+                    android:textAlignment="center"
                     android:textSize="16sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    tools:text="Elegant Earring" />
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:text="@string/item4_reviews"
-                    android:textColor="@color/text_secondary"
-                    android:textSize="14sp" />
+                    android:textAlignment="center"
+                    android:text="4.2 (99 reviews)" android:textColor="#666666"
+                    android:textSize="14sp"
+                    tools:text="⭐ 4.5 (30 reviews)" />
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:text="@string/item4_price"
-                    android:textColor="@color/price_text"
+                    android:text="ECP 500.00" android:textAlignment="center"
+                    android:textColor="#333333"
                     android:textSize="16sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    tools:text="EGP 590.00" />
             </LinearLayout>
         </LinearLayout>
 
-    </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="56dp" /> </LinearLayout>
 </ScrollView>
+
+</RelativeLayout>
