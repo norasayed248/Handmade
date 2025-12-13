@@ -17,7 +17,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // لازم activity_main (فيها nav_host_fragment + bottom_nav)
         setContentView(R.layout.activity_main)
 
         // ===== Room test (زي ما هو) =====
@@ -46,7 +45,6 @@ class MainActivity : AppCompatActivity() {
         val bottomNav = findViewById<BottomNavigationView>(R.id.bottom_nav)
         bottomNav.setupWithNavController(navController)
 
-        // اخفاء الـ bottom nav في login/signup
         navController.addOnDestinationChangedListener { _, destination, _ ->
             bottomNav.visibility = when (destination.id) {
                 R.id.loginFragment, R.id.signupFragment -> View.GONE
