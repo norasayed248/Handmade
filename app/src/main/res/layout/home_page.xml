@@ -10,61 +10,60 @@
     <LinearLayout
         android:id="@+id/bottomNav"
         android:layout_width="0dp"
-        android:layout_height="64dp"
+        android:layout_height="72dp"
         android:background="#E9E3DF"
-        android:gravity="center"
         android:orientation="horizontal"
-        android:paddingStart="18dp"
-        android:paddingEnd="18dp"
+        android:gravity="center"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:elevation="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
         <ImageView
-            android:layout_width="24dp"
+            android:id="@+id/navPerson"
+            android:layout_width="0dp"
             android:layout_height="24dp"
-            android:src="@android:drawable/ic_menu_myplaces"
-            android:contentDescription="profile" />
-
-        <Space
-            android:layout_width="34dp"
-            android:layout_height="1dp" />
+            android:layout_weight="1"
+            android:src="@drawable/profile"
+            android:contentDescription="profile"
+            android:scaleType="centerInside" />
 
         <ImageView
-            android:layout_width="24dp"
+            android:id="@+id/navWishlist"
+            android:layout_width="0dp"
             android:layout_height="24dp"
-            android:src="@android:drawable/btn_star_big_off"
-            android:contentDescription="wishlist" />
-
-        <Space
-            android:layout_width="34dp"
-            android:layout_height="1dp" />
+            android:layout_weight="1"
+            android:src="@drawable/favourite"
+            android:contentDescription="wishlist"
+            android:scaleType="centerInside" />
 
         <ImageView
-            android:layout_width="24dp"
+            android:id="@+id/navCart"
+            android:layout_width="0dp"
             android:layout_height="24dp"
-            android:src="@android:drawable/ic_menu_agenda"
-            android:contentDescription="cart" />
-
-        <Space
-            android:layout_width="34dp"
-            android:layout_height="1dp" />
+            android:layout_weight="1"
+            android:src="@drawable/home"
+            android:contentDescription="cart"
+            android:scaleType="centerInside" />
 
         <ImageView
-            android:layout_width="24dp"
+            android:id="@+id/navSearch"
+            android:layout_width="0dp"
             android:layout_height="24dp"
-            android:src="@android:drawable/ic_menu_search"
-            android:contentDescription="search" />
-
-        <Space
-            android:layout_width="34dp"
-            android:layout_height="1dp" />
+            android:layout_weight="1"
+            android:src="@drawable/search"
+            android:contentDescription="search"
+            android:scaleType="centerInside" />
 
         <ImageView
-            android:layout_width="24dp"
+            android:layout_width="0dp"
             android:layout_height="24dp"
-            android:src="@android:drawable/ic_menu_view"
-            android:contentDescription="home" />
+            android:layout_weight="1"
+            android:src="@drawable/cart"
+            android:contentDescription="home"
+            android:scaleType="centerInside" />
     </LinearLayout>
 
     <!-- Scroll -->
