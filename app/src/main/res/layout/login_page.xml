@@ -140,12 +140,14 @@
             android:textColor="@color/text_dark" />
 
         <TextView
+            android:id="@+id/tvGoSignup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="  Sign Up"
             android:textStyle="bold"
             android:textSize="14sp"
             android:textColor="@color/button_black" />
+
     </LinearLayout>
 
     <!-- OR with small clear lines -->

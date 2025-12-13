@@ -1,28 +1,30 @@
 package com.example.handmade
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
-import kotlinx.coroutines.launch
-
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.setupWithNavController
 import com.example.handmade.data.database.AppDatabase
-import com.example.handmade.data.repository.MainRepository
 import com.example.handmade.data.entities.UserEntity
+import com.example.handmade.data.repository.MainRepository
+import com.google.android.material.bottomnavigation.BottomNavigationView
+import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_wishlist)
 
+        // لازم activity_main (فيها nav_host_fragment + bottom_nav)
+        setContentView(R.layout.activity_main)
 
-
+        // ===== Room test (زي ما هو) =====
         val db = AppDatabase.getInstance(this)
         val repo = MainRepository(db)
 
         lifecycleScope.launch {
-
-
             repo.insertUser(
                 UserEntity(
                     name = "Test User",
@@ -31,10 +33,26 @@ class MainActivity : AppCompatActivity() {
                 )
             )
 
-            // قراءة يوزر
             val user = repo.getUserByEmail("test@test.com")
-
             println("✔ DATABASE WORKING — USER: $user")
         }
+        // ===============================
+
+        // ===== Navigation =====
+        val navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+        val navController = navHostFragment.navController
+
+        val bottomNav = findViewById<BottomNavigationView>(R.id.bottom_nav)
+        bottomNav.setupWithNavController(navController)
+
+        // اخفاء الـ bottom nav في login/signup
+        navController.addOnDestinationChangedListener { _, destination, _ ->
+            bottomNav.visibility = when (destination.id) {
+                R.id.loginFragment, R.id.signupFragment -> View.GONE
+                else -> View.VISIBLE
+            }
+        }
+        // ======================
     }
 }
