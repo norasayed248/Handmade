@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <!-- Base Colors -->
     <color name="background_light">#E9E3DF</color>
     <color name="edit_bg">#F2EEEB</color>
     <color name="border_grey">#D0C9C4</color>
@@ -8,5 +10,17 @@
     <color name="button_black">#000000</color>
     <color name="white">#FFFFFF</color>
 
+    <!-- Login Colors -->
+    <color name="forgot_password_color">#2D2724</color>
+    <color name="or_line">#7E7572</color>
+
+    <!-- Wishlist Colors -->
+    <color name="wishlist_background">#F5F5F5</color>
+    <color name="wishlist_title_color">#333333</color>
+    <color name="wishlist_text_secondary">#666666</color>
+    <color name="wishlist_image_placeholder">#E0E0E0</color>
+
+
 
 </resources>
+
