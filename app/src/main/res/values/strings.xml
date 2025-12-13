@@ -1,26 +1,3 @@
 <resources>
-    <string name="app_name">My Wishlist App</string>
-
-    <!-- Header -->
-    <string name="wishlist_title">My Wishlist</string>
-
-    <!-- Item 1 -->
-    <string name="item1_title">Y-SHAPED Necklace</string>
-    <string name="item1_reviews">4.99 (99 reviews)</string>
-    <string name="item1_price">ECP 1500.00</string>
-
-    <!-- Item 2 -->
-    <string name="item2_title">Ring Heart</string>
-    <string name="item2_reviews">4.5 (99 reviews)</string>
-    <string name="item2_price">ECP 1000.00</string>
-
-    <!-- Item 3 -->
-    <string name="item3_title">Gold Chain Bracelet</string>
-    <string name="item3_reviews">4.2 (99 reviews)</string>
-    <string name="item3_price">ECP 1500.00</string>
-
-    <!-- Item 4 -->
-    <string name="item4_title">Elegant Earring</string>
-    <string name="item4_reviews">4.2 (99 reviews)</string>
-    <string name="item4_price">ECP 500.00</string>
+    <string name="app_name">Handmade</string>
 </resources>
