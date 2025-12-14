@@ -20,6 +20,19 @@ class MainRepository(private val db: AppDatabase) {
         return db.userDao().getUserByName(name)
     }
 
+    // NEW: login by email + password
+    suspend fun login(email: String, password: String): UserEntity? {
+        return db.userDao().getUserByEmailAndPassword(email, password)
+    }
+
+    // NEW (اختياري بس مفيد): يمنع تكرار الإيميل
+    suspend fun signup(user: UserEntity): Boolean {
+        val existing = getUserByEmail(user.email)
+        if (existing != null) return false
+        insertUser(user)
+        return true
+    }
+
     // -------------------------
     // Products
     // -------------------------
