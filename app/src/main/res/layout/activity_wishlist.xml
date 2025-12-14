@@ -4,68 +4,56 @@
     android:layout_height="match_parent"
     android:background="@color/wishlist_background">
 
-    <!-- Bottom Nav (ثابت) -->
-<!--    <LinearLayout-->
-<!--        android:id="@+id/bottomNav"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="64dp"-->
-<!--        android:layout_alignParentBottom="true"-->
-<!--        android:background="@color/wishlist_background"-->
-<!--        android:gravity="center"-->
-<!--        android:orientation="horizontal"-->
-<!--        android:paddingStart="18dp"-->
-<!--        android:paddingEnd="18dp">-->
 
-<!--        <ImageView-->
-<!--            android:id="@+id/navProfile"-->
-<!--            android:layout_width="0dp"-->
-<!--            android:layout_height="24dp"-->
-<!--            android:layout_weight="1"-->
-<!--            android:scaleType="centerInside"-->
-<!--            android:src="@drawable/profile"-->
-<!--            android:contentDescription="profile" />-->
 
-<!--        <ImageView-->
-<!--            android:id="@+id/navWishlist"-->
-<!--            android:layout_width="0dp"-->
-<!--            android:layout_height="24dp"-->
-<!--            android:layout_weight="1"-->
-<!--            android:scaleType="centerInside"-->
-<!--            android:src="@drawable/favoriteda"-->
-<!--            android:contentDescription="wishlist" />-->
 
-<!--        <ImageView-->
-<!--            android:id="@+id/navCart"-->
-<!--            android:layout_width="0dp"-->
-<!--            android:layout_height="24dp"-->
-<!--            android:layout_weight="1"-->
-<!--            android:scaleType="centerInside"-->
-<!--            android:src="@drawable/home"-->
-<!--            android:contentDescription="cart" />-->
+    <LinearLayout
+        android:id="@+id/headerWishlist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="16dp">
 
-<!--        <ImageView-->
-<!--            android:id="@+id/navSearch"-->
-<!--            android:layout_width="0dp"-->
-<!--            android:layout_height="24dp"-->
-<!--            android:layout_weight="1"-->
-<!--            android:scaleType="centerInside"-->
-<!--            android:src="@drawable/search"-->
-<!--            android:contentDescription="search" />-->
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:rotation="90"
+            android:contentDescription="Back"
+            android:src="@drawable/arrow_down" />
 
-<!--        <ImageView-->
-<!--            android:id="@+id/navHome"-->
-<!--            android:layout_width="0dp"-->
-<!--            android:layout_height="24dp"-->
-<!--            android:layout_weight="1"-->
-<!--            android:scaleType="centerInside"-->
-<!--            android:src="@drawable/cart"-->
-<!--            android:contentDescription="home" />-->
-<!--    </LinearLayout>-->
+        <!-- Spacer عشان العنوان يفضل في النص -->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/tvWishlistTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/wishlist_title"
+            android:paddingRight="20dp"
+            android:textSize="24sp"
+            android:textStyle="normal"
+            android:textColor="@color/wishlist_title_color" />
+
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+    </LinearLayout>
 
     <!-- Scroll (فوق الناف بار) -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_below="@id/headerWishlist"
         android:padding="16dp"
         android:paddingBottom="90dp">
 
@@ -75,15 +63,16 @@
             android:orientation="vertical">
 
             <!-- Title -->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/wishlist_title"
-                android:textSize="24sp"
-                android:textStyle="normal"
-                android:textColor="@color/wishlist_title_color"
-                android:gravity="center"
-                android:layout_marginBottom="24dp" />
+
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="@string/wishlist_title"-->
+<!--                android:textSize="24sp"-->
+<!--                android:textStyle="normal"-->
+<!--                android:textColor="@color/wishlist_title_color"-->
+<!--                android:gravity="center"-->
+<!--                android:layout_marginBottom="24dp" />-->
 
             <!-- Row 1 -->
             <LinearLayout
