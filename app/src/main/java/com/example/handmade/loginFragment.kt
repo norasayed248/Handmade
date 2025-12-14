@@ -38,32 +38,23 @@ class LoginFragment : Fragment() {
             val username = etUsername.text.toString().trim()
             val password = etPassword.text.toString().trim()
 
-            // 1) Validation
             if (username.isEmpty() || password.isEmpty()) {
                 Toast.makeText(requireContext(), "اكتبي اليوزر نيم والباسورد", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
 
-            // 2) Check from DB
             viewLifecycleOwner.lifecycleScope.launch {
-
-                // ✅ لازم يكون عندك دالة زي دي في repo
-                val user = repo.getUserByName(username)
+                val user = repo.login(username, password)
 
                 if (user == null) {
-                    Toast.makeText(requireContext(), "اليوزر نيم غلط / مش موجود", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(requireContext(), "اليوزر نيم أو الباسورد غلط", Toast.LENGTH_SHORT).show()
                     return@launch
                 }
 
-                if (user.password != password) {
-                    Toast.makeText(requireContext(), "الباسورد غلط", Toast.LENGTH_SHORT).show()
-                    return@launch
-                }
-
-                // 3) Success
                 findNavController().navigate(R.id.homeFragment)
             }
         }
+
 
         view.findViewById<View>(R.id.tvGoSignup)?.setOnClickListener {
             findNavController().navigate(R.id.signupFragment)

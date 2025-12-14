@@ -51,12 +51,12 @@ class SignupFragment : Fragment() {
             }
 
             viewLifecycleOwner.lifecycleScope.launch {
-                // لو انت ضفت signup() في MainRepository استخدمها (أفضل عشان يمنع تكرار الإيميل)
-                val ok = try {
-                    repo.signup(UserEntity(name = name, password = pass))
-                } catch (e: Exception) {
-                    false
-                }
+                val ok = repo.signup(
+                    username = name,
+                    email = email,
+                    password = pass
+                )
+
 
                 if (ok) {
                     Toast.makeText(requireContext(), "Account created", Toast.LENGTH_SHORT).show()
