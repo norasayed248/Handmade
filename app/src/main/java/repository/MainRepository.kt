@@ -8,28 +8,27 @@ import com.example.handmade.data.entities.UserEntity
 class MainRepository(private val db: AppDatabase) {
 
     // -------------------------
-    // Users
+    // Users (USERNAME + PASSWORD)
     // -------------------------
+
     suspend fun insertUser(user: UserEntity) {
         db.userDao().insertUser(user)
     }
 
-
-    // ✅ NEW
     suspend fun getUserByName(name: String): UserEntity? {
         return db.userDao().getUserByName(name)
     }
 
-    // NEW: login by email + password
-    suspend fun login(email: String, password: String): UserEntity? {
-        return db.userDao().getUserByEmailAndPassword(email, password)
+    // ✅ Login by username + password
+    suspend fun login(username: String, password: String): UserEntity? {
+        return db.userDao().getUserByName(username)
     }
 
-    // NEW (اختياري بس مفيد): يمنع تكرار الإيميل
+    // ✅ Signup by username (من غير تكرار)
     suspend fun signup(user: UserEntity): Boolean {
-        val existing = getUserByEmail(user.email)
+        val existing = db.userDao().getUserByName(user.name)
         if (existing != null) return false
-        insertUser(user)
+        db.userDao().insertUser(user)
         return true
     }
 

@@ -53,7 +53,7 @@ class SignupFragment : Fragment() {
             viewLifecycleOwner.lifecycleScope.launch {
                 // لو انت ضفت signup() في MainRepository استخدمها (أفضل عشان يمنع تكرار الإيميل)
                 val ok = try {
-                    repo.signup(UserEntity(name = name, email = email, password = pass))
+                    repo.signup(UserEntity(name = name, password = pass))
                 } catch (e: Exception) {
                     false
                 }
