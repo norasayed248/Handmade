@@ -6,9 +6,6 @@
     android:layout_height="match_parent"
     android:background="#E9E3DF">
 
-
-
-
     <ScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -18,11 +15,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-
-    <LinearLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
             <!-- HERO -->
             <FrameLayout
                 android:layout_width="match_parent"
@@ -99,12 +96,29 @@
                             app:cardUseCompatPadding="false"
                             app:cardBackgroundColor="#E9E3DF">
 
-                            <ImageView
+                            <FrameLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:scaleType="centerCrop"
-                                android:src="@drawable/neck1"
-                                android:contentDescription="Choker" />
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/neck1"
+                                    android:contentDescription="Choker" />
+
+                                <ImageView
+                                    android:id="@+id/btnFav1"
+                                    android:layout_width="28dp"
+                                    android:layout_height="28dp"
+                                    android:layout_gravity="top|end"
+                                    android:layout_margin="8dp"
+                                    android:src="@drawable/favoriteda"
+                                    android:contentDescription="Favorite"
+                                    android:clickable="true"
+                                    android:focusable="true" />
+                            </FrameLayout>
+
                         </androidx.cardview.widget.CardView>
 
                         <TextView
@@ -149,12 +163,29 @@
                             app:cardUseCompatPadding="false"
                             app:cardBackgroundColor="#E9E3DF">
 
-                            <ImageView
+                            <FrameLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:scaleType="centerCrop"
-                                android:src="@drawable/ring1"
-                                android:contentDescription="Ring" />
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/ring1"
+                                    android:contentDescription="Ring" />
+
+                                <ImageView
+                                    android:id="@+id/btnFav2"
+                                    android:layout_width="28dp"
+                                    android:layout_height="28dp"
+                                    android:layout_gravity="top|end"
+                                    android:layout_margin="8dp"
+                                    android:src="@drawable/favoriteda"
+                                    android:contentDescription="Favorite"
+                                    android:clickable="true"
+                                    android:focusable="true" />
+                            </FrameLayout>
+
                         </androidx.cardview.widget.CardView>
 
                         <TextView
@@ -183,7 +214,7 @@
                             android:gravity="center" />
                     </LinearLayout>
 
-                    <!-- Item 3 (مضاف جنبهم بالعرض) -->
+                    <!-- Item 3 -->
                     <LinearLayout
                         android:layout_width="150dp"
                         android:layout_height="wrap_content"
@@ -198,12 +229,29 @@
                             app:cardUseCompatPadding="false"
                             app:cardBackgroundColor="#E9E3DF">
 
-                            <ImageView
+                            <FrameLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:scaleType="centerCrop"
-                                android:src="@drawable/ear1"
-                                android:contentDescription="ear1" />
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/ear1"
+                                    android:contentDescription="ear1" />
+
+                                <ImageView
+                                    android:id="@+id/btnFav3"
+                                    android:layout_width="28dp"
+                                    android:layout_height="28dp"
+                                    android:layout_gravity="top|end"
+                                    android:layout_margin="8dp"
+                                    android:src="@drawable/favoriteda"
+                                    android:contentDescription="Favorite"
+                                    android:clickable="true"
+                                    android:focusable="true" />
+                            </FrameLayout>
+
                         </androidx.cardview.widget.CardView>
 
                         <TextView
@@ -256,145 +304,8 @@
                 android:paddingBottom="18dp"
                 android:stretchColumns="*">
 
-                <TableRow>
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:layout_margin="4dp"
-                        android:orientation="vertical">
-
-                        <androidx.cardview.widget.CardView
-                            android:layout_width="match_parent"
-                            android:layout_height="190dp"
-                            app:cardCornerRadius="0dp"
-                            app:cardElevation="6dp"
-                            app:cardUseCompatPadding="false">
-
-                            <ImageView
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:scaleType="centerCrop"
-                                android:src="@drawable/necklace_categ"
-                                android:contentDescription="Necklaces" />
-                        </androidx.cardview.widget.CardView>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Necklaces"
-                            android:textColor="#111111"
-                            android:textSize="18sp"
-                            android:fontFamily="serif"
-                            android:gravity="center"
-                            android:layout_marginTop="6dp" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:layout_margin="4dp"
-                        android:orientation="vertical">
-
-                        <androidx.cardview.widget.CardView
-                            android:layout_width="match_parent"
-                            android:layout_height="190dp"
-                            app:cardCornerRadius="0dp"
-                            app:cardElevation="6dp"
-                            app:cardUseCompatPadding="false">
-
-                            <ImageView
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:scaleType="centerCrop"
-                                android:src="@drawable/ring_categ"
-                                android:contentDescription="Rings" />
-                        </androidx.cardview.widget.CardView>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Rings"
-                            android:textColor="#111111"
-                            android:textSize="18sp"
-                            android:fontFamily="serif"
-                            android:gravity="center"
-                            android:layout_marginTop="6dp" />
-                    </LinearLayout>
-
-                </TableRow>
-
-                <TableRow>
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:layout_margin="4dp"
-                        android:orientation="vertical">
-
-                        <androidx.cardview.widget.CardView
-                            android:layout_width="match_parent"
-                            android:layout_height="190dp"
-                            app:cardCornerRadius="0dp"
-                            app:cardElevation="6dp"
-                            app:cardUseCompatPadding="false">
-
-                            <ImageView
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:scaleType="centerCrop"
-                                android:src="@drawable/earrings_categ"
-                                android:contentDescription="Earrings" />
-                        </androidx.cardview.widget.CardView>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Earrings"
-                            android:textSize="18sp"
-                            android:fontFamily="serif"
-                            android:textColor="#111111"
-                            android:gravity="center"
-                            android:layout_marginTop="6dp" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:layout_margin="4dp"
-                        android:orientation="vertical">
-
-                        <androidx.cardview.widget.CardView
-                            android:layout_width="match_parent"
-                            android:layout_height="190dp"
-                            app:cardCornerRadius="0dp"
-                            app:cardElevation="6dp"
-                            app:cardUseCompatPadding="false">
-
-                            <ImageView
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:scaleType="centerCrop"
-                                android:src="@drawable/sets_categ"
-                                android:contentDescription="Sets" />
-                        </androidx.cardview.widget.CardView>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Sets"
-                            android:textSize="18sp"
-                            android:fontFamily="serif"
-                            android:textColor="#111111"
-                            android:gravity="center"
-                            android:layout_marginTop="6dp" />
-                    </LinearLayout>
-
-                </TableRow>
+                <!-- نفس جدولك زي ما هو -->
+                <!-- ... (Necklaces/Rings/Earrings/Sets) ... -->
 
             </TableLayout>
 

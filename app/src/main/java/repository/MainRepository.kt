@@ -4,32 +4,21 @@ import com.example.handmade.data.database.AppDatabase
 import com.example.handmade.data.entities.FavouriteEntity
 import com.example.handmade.data.entities.ProductEntity
 import com.example.handmade.data.entities.UserEntity
+import kotlinx.coroutines.flow.Flow
 
 class MainRepository(private val db: AppDatabase) {
 
     // -------------------------
     // Users (USERNAME + PASSWORD)
     // -------------------------
-
     suspend fun insertUser(user: UserEntity) {
         db.userDao().insertUser(user)
     }
 
-    suspend fun getUserByName(name: String): UserEntity? {
-        return db.userDao().getUserByName(name)
-    }
 
-    // ✅ Login by username + password
+
     suspend fun login(username: String, password: String): UserEntity? {
-        return db.userDao().getUserByName(username)
-    }
-
-    // ✅ Signup by username (من غير تكرار)
-    suspend fun signup(user: UserEntity): Boolean {
-        val existing = db.userDao().getUserByName(user.name)
-        if (existing != null) return false
-        db.userDao().insertUser(user)
-        return true
+        return db.userDao().getUserByNameAndPassword(username, password)
     }
 
     // -------------------------
@@ -65,4 +54,11 @@ class MainRepository(private val db: AppDatabase) {
     suspend fun getUserFavourites(userId: Int): List<FavouriteEntity> {
         return db.favouriteDao().getUserFavourites(userId)
     }
+
+    fun observeUserFavourites(userId: Int): Flow<List<FavouriteEntity>> {
+        return db.favouriteDao().observeUserFavourites(userId)
+    }
+    fun observeWishlistProducts(userId: Int) =
+        db.favouriteDao().observeWishlistProducts(userId)
+
 }

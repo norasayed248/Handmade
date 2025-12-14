@@ -12,6 +12,6 @@ interface UserDao {
     suspend fun insertUser(user: UserEntity)
 
     // ✅ NEW: search by username (name)
-    @Query("SELECT * FROM users WHERE name = :name LIMIT 1")
-    suspend fun getUserByName(name: String): UserEntity?
+    @Query("SELECT * FROM users WHERE name = :username AND password = :password LIMIT 1")
+    suspend fun getUserByNameAndPassword(username: String, password: String): UserEntity?
 }

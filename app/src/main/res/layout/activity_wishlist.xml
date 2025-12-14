@@ -4,9 +4,6 @@
     android:layout_height="match_parent"
     android:background="@color/wishlist_background">
 
-
-
-
     <LinearLayout
         android:id="@+id/headerWishlist"
         android:layout_width="match_parent"
@@ -25,7 +22,6 @@
             android:contentDescription="Back"
             android:src="@drawable/arrow_down" />
 
-        <!-- Spacer عشان العنوان يفضل في النص -->
         <View
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -41,15 +37,12 @@
             android:textStyle="normal"
             android:textColor="@color/wishlist_title_color" />
 
-
         <View
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_weight="1" />
-
     </LinearLayout>
 
-    <!-- Scroll (فوق الناف بار) -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -61,18 +54,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
-            <!-- Title -->
-
-<!--            <TextView-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="@string/wishlist_title"-->
-<!--                android:textSize="24sp"-->
-<!--                android:textStyle="normal"-->
-<!--                android:textColor="@color/wishlist_title_color"-->
-<!--                android:gravity="center"-->
-<!--                android:layout_marginBottom="24dp" />-->
 
             <!-- Row 1 -->
             <LinearLayout
@@ -260,6 +241,14 @@
                         android:textStyle="bold" />
                 </LinearLayout>
             </LinearLayout>
+
+            <!-- ===== NEW: container للـ favourites اللي هتتضاف من Room ===== -->
+            <LinearLayout
+                android:id="@+id/llWishlistDynamic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp" />
 
         </LinearLayout>
     </ScrollView>
