@@ -1,0 +1,51 @@
+<resources>
+
+    <!-- App -->
+    <string name="app_name">Handmade</string>
+    <string name="logo_desc">AURA Logo</string>
+
+    <!-- Sign Up -->
+    <string name="create_account">إنشاء حساب</string>
+    <string name="hint_name">الإسم</string>
+    <string name="hint_email">البريد الإلكتروني</string>
+    <string name="hint_password">كلمة المرور</string>
+    <string name="hint_confirm_password">تأكيد كلمة المرور</string>
+    <string name="signup">إنشاء حساب</string>
+    <string name="or">OR</string>
+    <string name="google">Google</string>
+    <string name="facebook">Facebook</string>
+
+    <!-- Login -->
+    <string name="login_title">Welcome Back</string>
+    <string name="login">تسجيل الدخول</string>
+    <string name="forgot_password">نسيت كلمة المرور؟</string>
+    <string name="hint_login_email">البريد الإلكتروني</string>
+    <string name="hint_login_password">كلمة المرور</string>
+
+    <!-- Wishlist -->
+    <string name="wishlist_title">المفضله</string>
+
+    <string name="product_necklace">Y-SHAPED Necklace</string>
+    <string name="product_ring">Ring Heart</string>
+    <string name="product_bracelet">Gold Chain Bracelet</string>
+    <string name="product_earring">Elegant Earring</string>
+
+    <string name="review_499">4.99 (99 reviews)</string>
+    <string name="review_45">4.5 (99 reviews)</string>
+    <string name="review_42">4.2 (99 reviews)</string>
+
+    <string name="price_1500">EGP 1500.00</string>
+    <string name="price_1000">EGP 1000.00</string>
+    <string name="price_500">EGP 500.00</string>
+
+    <!--TODO: Remove or change this placeholder text-->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="settings">الإعدادات</string>
+    <string name="language">اللغة</string>
+    <string name="english">الإنجليزية</string>
+    <string name="arabic">العربية</string>
+    <string name="back">رجوع</string>
+    <string name="profile">الملف الشخصي</string>
+
+</resources>

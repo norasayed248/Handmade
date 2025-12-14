@@ -14,7 +14,7 @@
         android:layout_height="26dp"
         android:layout_marginStart="20dp"
         android:rotation="90"
-        android:contentDescription="Back"
+        android:contentDescription="@string/back"
         app:srcCompat="@drawable/arrow_down"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -23,7 +23,7 @@
         android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Settings"
+        android:text="@string/settings"
         android:textSize="30sp"
         android:textColor="#2B2B2B"
         app:layout_constraintTop_toTopOf="parent"
@@ -70,7 +70,7 @@
                     <ImageView
                         android:layout_width="26dp"
                         android:layout_height="26dp"
-                        android:contentDescription="Profile"
+                        android:contentDescription="@string/profile"
                         app:srcCompat="@drawable/profile" />
 
                     <TextView
@@ -87,8 +87,6 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="16dp"/>
-
-            <!-- Row helper style: height 56dp, icon 22dp, title 20sp -->
 
             <!-- Notification -->
             <LinearLayout
@@ -261,23 +259,27 @@
 
             <!-- Language -->
             <LinearLayout
+                android:id="@+id/rowLanguage"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:orientation="horizontal"
-                android:gravity="center_vertical">
+                android:gravity="center_vertical"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground">
 
                 <ImageView
                     android:layout_width="22dp"
                     android:layout_height="22dp"
                     app:srcCompat="@drawable/language"
-                    android:contentDescription="Language"/>
+                    android:contentDescription="@string/language"/>
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:layout_marginStart="16dp"
-                    android:text="Language"
+                    android:text="@string/language"
                     android:textSize="20sp"
                     android:textColor="#2B2B2B"/>
 
