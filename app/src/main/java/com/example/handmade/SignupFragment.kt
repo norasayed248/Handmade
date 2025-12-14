@@ -41,12 +41,14 @@ class SignupFragment : Fragment() {
             val confirm = etConfirm.text.toString()
 
             if (name.isEmpty() || email.isEmpty() || pass.isEmpty() || confirm.isEmpty()) {
-                Toast.makeText(requireContext(), "Please fill all fields", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), "Please fill all fields", Toast.LENGTH_SHORT)
+                    .show()
                 return@setOnClickListener
             }
 
             if (pass != confirm) {
-                Toast.makeText(requireContext(), "Passwords not matching", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), "Passwords not matching", Toast.LENGTH_SHORT)
+                    .show()
                 return@setOnClickListener
             }
 
@@ -57,15 +59,18 @@ class SignupFragment : Fragment() {
                     password = pass
                 )
 
-
                 if (ok) {
                     Toast.makeText(requireContext(), "Account created", Toast.LENGTH_SHORT).show()
-                    // بعد التسجيل نرجّع المستخدم للّوجين
                     findNavController().navigate(R.id.loginFragment)
                 } else {
-                    Toast.makeText(requireContext(), "Email already exists (or error)", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(
+                        requireContext(),
+                        "Username or Email already exists",
+                        Toast.LENGTH_SHORT
+                    ).show()
                 }
             }
+
         }
     }
 }

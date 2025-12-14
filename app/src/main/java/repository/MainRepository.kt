@@ -7,23 +7,34 @@ import com.example.handmade.data.entities.UserEntity
 
 class MainRepository(private val db: AppDatabase) {
 
-    // =========================
-    // USERS
-    // =========================
+    // -------------------------
+    // Users (USERNAME + PASSWORD)
+    // -------------------------
 
-    // 🔒 LOGIN (username + password فقط)
-    suspend fun login(username: String, password: String): UserEntity? {
-        return db.userDao().login(username, password)
+    suspend fun insertUser(user: UserEntity) {
+        db.userDao().insertUser(user)
     }
 
-    // ✍️ SIGNUP (username + email + password)
+    suspend fun getUserByName(name: String): UserEntity? {
+        return db.userDao().getUserByName(name)
+    }
+
+    // ✅ Login by username + password
+    suspend fun login(username: String, password: String): UserEntity? {
+        return db.userDao().getUserByName(username)
+    }
+
+    // ✅ Signup by username (من غير تكرار)
+    // ✅ Signup (username + email + password) + منع التكرار
     suspend fun signup(username: String, email: String, password: String): Boolean {
 
-        // username متكرر؟
-        if (db.userDao().getUserByName(username) != null) return false
+        // يمنع تكرار اليوزرنيم
+        val existingName = db.userDao().getUserByName(username)
+        if (existingName != null) return false
 
-        // email متكرر؟
-        if (db.userDao().getUserByEmail(email) != null) return false
+        // يمنع تكرار الإيميل
+        val existingEmail = db.userDao().getUserByEmail(email)
+        if (existingEmail != null) return false
 
         db.userDao().insertUser(
             UserEntity(
@@ -35,9 +46,11 @@ class MainRepository(private val db: AppDatabase) {
         return true
     }
 
-    // =========================
-    // PRODUCTS
-    // =========================
+
+
+    // -------------------------
+    // Products
+    // -------------------------
     suspend fun insertProduct(product: ProductEntity) {
         db.productDao().insertProduct(product)
     }
@@ -50,9 +63,9 @@ class MainRepository(private val db: AppDatabase) {
         return db.productDao().getProductById(id)
     }
 
-    // =========================
-    // FAVOURITES
-    // =========================
+    // -------------------------
+    // Favourites
+    // -------------------------
     suspend fun addToFavourite(fav: FavouriteEntity) {
         db.favouriteDao().addToFavourite(fav)
     }
