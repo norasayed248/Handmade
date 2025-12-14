@@ -1,6 +1,7 @@
 package com.example.handmade
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
@@ -16,38 +17,32 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         setContentView(R.layout.activity_main)
 
-        // ===== Room test (زي ما هو) =====
-        val db = AppDatabase.getInstance(this)
-        val repo = MainRepository(db)
 
-        lifecycleScope.launch {
-            repo.insertUser(
-                UserEntity(
-                    name = "Test User",
-                    email = "test@test.com",
-                    password = "1234"
-                )
-            )
-
-            val user = repo.getUserByEmail("test@test.com")
-            println("✔ DATABASE WORKING — USER: $user")
-        }
-        // ===============================
 
         // ===== Navigation =====
-        val navHostFragment =
-            supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+        val navHostFragment = supportFragmentManager
+            .findFragmentById(R.id.nav_host_fragment) as? NavHostFragment
+
+        if (navHostFragment == null) {
+            Log.e("NAV", "nav_host_fragment not found in activity_main.xml")
+            return
+        }
+
         val navController = navHostFragment.navController
 
-        val bottomNav = findViewById<BottomNavigationView>(R.id.bottom_nav)
+        val bottomNav = findViewById<BottomNavigationView?>(R.id.bottom_nav)
+        if (bottomNav == null) {
+            Log.e("NAV", "bottom_nav not found in activity_main.xml")
+            return
+        }
+
         bottomNav.setupWithNavController(navController)
 
         navController.addOnDestinationChangedListener { _, destination, _ ->
             bottomNav.visibility = when (destination.id) {
-                R.id.loginFragment, R.id.signupFragment -> View.GONE
+                R.id.loginFragment, R.id.signupFragment ,R.id.SplashFragment ,-> View.GONE
                 else -> View.VISIBLE
             }
         }

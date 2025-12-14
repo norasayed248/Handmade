@@ -14,8 +14,10 @@ class MainRepository(private val db: AppDatabase) {
         db.userDao().insertUser(user)
     }
 
-    suspend fun getUserByEmail(email: String): UserEntity? {
-        return db.userDao().getUserByEmail(email)
+
+    // ✅ NEW
+    suspend fun getUserByName(name: String): UserEntity? {
+        return db.userDao().getUserByName(name)
     }
 
     // -------------------------
