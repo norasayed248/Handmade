@@ -7,34 +7,37 @@ import com.example.handmade.data.entities.UserEntity
 
 class MainRepository(private val db: AppDatabase) {
 
-    // -------------------------
-    // Users (USERNAME + PASSWORD)
-    // -------------------------
+    // =========================
+    // USERS
+    // =========================
 
-    suspend fun insertUser(user: UserEntity) {
-        db.userDao().insertUser(user)
-    }
-
-    suspend fun getUserByName(name: String): UserEntity? {
-        return db.userDao().getUserByName(name)
-    }
-
-    // ✅ Login by username + password
+    // 🔒 LOGIN (username + password فقط)
     suspend fun login(username: String, password: String): UserEntity? {
-        return db.userDao().getUserByName(username)
+        return db.userDao().login(username, password)
     }
 
-    // ✅ Signup by username (من غير تكرار)
-    suspend fun signup(user: UserEntity): Boolean {
-        val existing = db.userDao().getUserByName(user.name)
-        if (existing != null) return false
-        db.userDao().insertUser(user)
+    // ✍️ SIGNUP (username + email + password)
+    suspend fun signup(username: String, email: String, password: String): Boolean {
+
+        // username متكرر؟
+        if (db.userDao().getUserByName(username) != null) return false
+
+        // email متكرر؟
+        if (db.userDao().getUserByEmail(email) != null) return false
+
+        db.userDao().insertUser(
+            UserEntity(
+                name = username,
+                email = email,
+                password = password
+            )
+        )
         return true
     }
 
-    // -------------------------
-    // Products
-    // -------------------------
+    // =========================
+    // PRODUCTS
+    // =========================
     suspend fun insertProduct(product: ProductEntity) {
         db.productDao().insertProduct(product)
     }
@@ -47,9 +50,9 @@ class MainRepository(private val db: AppDatabase) {
         return db.productDao().getProductById(id)
     }
 
-    // -------------------------
-    // Favourites
-    // -------------------------
+    // =========================
+    // FAVOURITES
+    // =========================
     suspend fun addToFavourite(fav: FavouriteEntity) {
         db.favouriteDao().addToFavourite(fav)
     }
