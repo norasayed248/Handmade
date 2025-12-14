@@ -39,7 +39,7 @@ class LoginFragment : Fragment() {
             val password = etPassword.text.toString().trim()
 
             if (username.isEmpty() || password.isEmpty()) {
-                Toast.makeText(requireContext(), "اكتبي اليوزر نيم والباسورد", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), "empty username & pass", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
 
@@ -47,9 +47,13 @@ class LoginFragment : Fragment() {
                 val user = repo.login(username, password)
 
                 if (user == null) {
-                    Toast.makeText(requireContext(), "اليوزر نيم أو الباسورد غلط", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(requireContext(), "wrong username or pass", Toast.LENGTH_SHORT).show()
                     return@launch
                 }
+                val prefs = requireContext().getSharedPreferences("auth", android.content.Context.MODE_PRIVATE)
+                prefs.edit()
+                    .putString("username", user.name)
+                    .apply()
 
                 findNavController().navigate(R.id.homeFragment)
             }
