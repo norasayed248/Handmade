@@ -50,15 +50,17 @@ class LoginFragment : Fragment() {
                     Toast.makeText(requireContext(), "wrong username or pass", Toast.LENGTH_SHORT).show()
                     return@launch
                 }
+
+                // ✅ هنا الإضافة المطلوبة (من غير ما نبوّظ حاجة)
                 val prefs = requireContext().getSharedPreferences("auth", android.content.Context.MODE_PRIVATE)
                 prefs.edit()
-                    .putString("username", user.name)
+                    .putInt("userId", user.id)          // ✅ مهم للفيفوريت/الويشليست
+                    .putString("username", user.name)   // ✅ الاسم اللي هيظهر في Settings
                     .apply()
 
                 findNavController().navigate(R.id.homeFragment)
             }
         }
-
 
         view.findViewById<View>(R.id.tvGoSignup)?.setOnClickListener {
             findNavController().navigate(R.id.signupFragment)

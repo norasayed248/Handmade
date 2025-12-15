@@ -62,7 +62,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Best sellers"
-                android:textSize="22sp"
+                android:textSize="26sp"
                 android:fontFamily="serif"
                 android:textColor="#111111"
                 android:gravity="center"
@@ -284,30 +284,169 @@
                 </LinearLayout>
             </HorizontalScrollView>
 
-            <!-- Categories -->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Categories"
-                android:textSize="22sp"
-                android:fontFamily="serif"
-                android:textColor="#111111"
-                android:gravity="center"
-                android:layout_marginTop="18dp"
-                android:layout_marginBottom="10dp" />
+                <!-- Categories -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Categories"
+                    android:textSize="22sp"
+                    android:fontFamily="serif"
+                    android:textColor="#111111"
+                    android:gravity="center"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginBottom="10dp" />
 
-            <TableLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingStart="12dp"
-                android:paddingEnd="12dp"
-                android:paddingBottom="18dp"
-                android:stretchColumns="*">
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:paddingBottom="18dp"
+                    android:stretchColumns="*">
 
-                <!-- نفس جدولك زي ما هو -->
-                <!-- ... (Necklaces/Rings/Earrings/Sets) ... -->
+                    <!-- Row 1 -->
+                    <TableRow>
 
-            </TableLayout>
+                        <!-- Necklaces -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_margin="4dp"
+                            android:orientation="vertical">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="190dp"
+                                app:cardCornerRadius="0dp"
+                                app:cardElevation="6dp"
+                                app:cardUseCompatPadding="false">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/necklace_categ"
+                                    android:contentDescription="Necklaces" />
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Necklaces"
+                                android:textColor="#111111"
+                                android:textSize="18sp"
+                                android:gravity="center"
+                                android:layout_marginTop="6dp" />
+                        </LinearLayout>
+
+                        <!-- Rings -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_margin="4dp"
+                            android:orientation="vertical">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="190dp"
+                                app:cardCornerRadius="0dp"
+                                app:cardElevation="6dp"
+                                app:cardUseCompatPadding="false">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/ring_categ"
+                                    android:contentDescription="Rings" />
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Rings"
+                                android:textColor="#111111"
+                                android:textStyle="bold"
+                                android:gravity="center"
+                                android:layout_marginTop="6dp" />
+                        </LinearLayout>
+
+                    </TableRow>
+
+                    <!-- Row 2 -->
+                    <TableRow>
+
+                        <!-- Earrings -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_margin="4dp"
+                            android:orientation="vertical">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="190dp"
+                                app:cardCornerRadius="0dp"
+                                app:cardElevation="6dp"
+                                app:cardUseCompatPadding="false">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/earrings_categ"
+                                    android:contentDescription="Earrings" />
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Earrings"
+                                android:textColor="#111111"
+                                android:textStyle="bold"
+                                android:gravity="center"
+                                android:layout_marginTop="6dp" />
+                        </LinearLayout>
+
+                        <!-- Sets -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_margin="4dp"
+                            android:orientation="vertical">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="190dp"
+                                app:cardCornerRadius="0dp"
+                                app:cardElevation="6dp"
+                                app:cardUseCompatPadding="false">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/sets_categ"
+                                    android:contentDescription="Sets" />
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Sets"
+                                android:textColor="#111111"
+                                android:textStyle="bold"
+                                android:gravity="center"
+                                android:layout_marginTop="6dp" />
+                        </LinearLayout>
+
+                    </TableRow>
+
+                </TableLayout>
 
         </LinearLayout>
     </ScrollView>
