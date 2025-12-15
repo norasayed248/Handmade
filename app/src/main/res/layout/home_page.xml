@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E9E3DF">
+    android:background="@color/bg_main">
 
     <ScrollView
         android:layout_width="0dp"
@@ -29,7 +29,7 @@
                     android:id="@+id/imgHero"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:contentDescription="Hero"
+                    android:contentDescription="@string/hero"
                     android:scaleType="centerCrop"
                     android:src="@drawable/hero" />
 
@@ -40,7 +40,7 @@
                     android:layout_gravity="top|center_horizontal"
                     android:layout_marginTop="200dp"
                     android:adjustViewBounds="true"
-                    android:contentDescription="AURA Logo"
+                    android:contentDescription="@string/aura_logo"
                     android:scaleType="fitCenter"
                     android:src="@drawable/aura2" />
 
@@ -50,8 +50,8 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="top|center_horizontal"
                     android:layout_marginTop="320dp"
-                    android:text="A brand of handmade jewellery made in Egypt"
-                    android:textColor="#E9E3DF"
+                    android:text="@string/tagline"
+                    android:textColor="@color/text_on_hero"
                     android:textSize="12sp"
                     android:fontFamily="serif"
                     android:gravity="center" />
@@ -61,10 +61,10 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Best sellers"
+                android:text="@string/best_sellers"
                 android:textSize="26sp"
                 android:fontFamily="serif"
-                android:textColor="#111111"
+                android:textColor="@color/text_primary"
                 android:gravity="center"
                 android:layout_marginTop="30dp"
                 android:layout_marginBottom="15dp" />
@@ -94,7 +94,7 @@
                             app:cardCornerRadius="0dp"
                             app:cardElevation="6dp"
                             app:cardUseCompatPadding="false"
-                            app:cardBackgroundColor="#E9E3DF">
+                            app:cardBackgroundColor="@color/bg_main">
 
                             <FrameLayout
                                 android:layout_width="match_parent"
@@ -105,7 +105,7 @@
                                     android:layout_height="match_parent"
                                     android:scaleType="centerCrop"
                                     android:src="@drawable/neck1"
-                                    android:contentDescription="Choker" />
+                                    android:contentDescription="@string/choker" />
 
                                 <ImageView
                                     android:id="@+id/btnFav1"
@@ -114,7 +114,7 @@
                                     android:layout_gravity="top|end"
                                     android:layout_margin="8dp"
                                     android:src="@drawable/favoriteda"
-                                    android:contentDescription="Favorite"
+                                    android:contentDescription="@string/favorite"
                                     android:clickable="true"
                                     android:focusable="true" />
                             </FrameLayout>
@@ -124,9 +124,9 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Choker Monica"
+                            android:text="@string/item1_name"
                             android:fontFamily="serif"
-                            android:textColor="#111111"
+                            android:textColor="@color/text_primary"
                             android:textSize="12sp"
                             android:layout_marginTop="6dp"
                             android:gravity="center" />
@@ -134,16 +134,16 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="5.0 (92 reviews)"
-                            android:textColor="#111111"
+                            android:text="@string/item1_reviews"
+                            android:textColor="@color/text_primary"
                             android:textSize="12sp"
                             android:gravity="center" />
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="EGP 1499.00"
-                            android:textColor="#111111"
+                            android:text="@string/item1_price"
+                            android:textColor="@color/text_primary"
                             android:textSize="12sp"
                             android:gravity="center" />
                     </LinearLayout>
@@ -161,7 +161,7 @@
                             app:cardCornerRadius="0dp"
                             app:cardElevation="6dp"
                             app:cardUseCompatPadding="false"
-                            app:cardBackgroundColor="#E9E3DF">
+                            app:cardBackgroundColor="@color/bg_main">
 
                             <FrameLayout
                                 android:layout_width="match_parent"
@@ -172,7 +172,7 @@
                                     android:layout_height="match_parent"
                                     android:scaleType="centerCrop"
                                     android:src="@drawable/ring1"
-                                    android:contentDescription="Ring" />
+                                    android:contentDescription="@string/ring" />
 
                                 <ImageView
                                     android:id="@+id/btnFav2"
@@ -181,7 +181,7 @@
                                     android:layout_gravity="top|end"
                                     android:layout_margin="8dp"
                                     android:src="@drawable/favoriteda"
-                                    android:contentDescription="Favorite"
+                                    android:contentDescription="@string/favorite"
                                     android:clickable="true"
                                     android:focusable="true" />
                             </FrameLayout>
@@ -191,8 +191,8 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Ring Heart"
-                            android:textColor="#111111"
+                            android:text="@string/item2_name"
+                            android:textColor="@color/text_primary"
                             android:textSize="12sp"
                             android:layout_marginTop="6dp"
                             android:gravity="center" />
@@ -200,16 +200,16 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="4.9 (114 reviews)"
-                            android:textColor="#111111"
+                            android:text="@string/item2_reviews"
+                            android:textColor="@color/text_primary"
                             android:textSize="12sp"
                             android:gravity="center" />
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="EGP 1299.00"
-                            android:textColor="#111111"
+                            android:text="@string/item2_price"
+                            android:textColor="@color/text_primary2"
                             android:textSize="12sp"
                             android:gravity="center" />
                     </LinearLayout>
@@ -227,7 +227,7 @@
                             app:cardCornerRadius="0dp"
                             app:cardElevation="6dp"
                             app:cardUseCompatPadding="false"
-                            app:cardBackgroundColor="#E9E3DF">
+                            app:cardBackgroundColor="@color/bg_main">
 
                             <FrameLayout
                                 android:layout_width="match_parent"
@@ -238,7 +238,7 @@
                                     android:layout_height="match_parent"
                                     android:scaleType="centerCrop"
                                     android:src="@drawable/ear1"
-                                    android:contentDescription="ear1" />
+                                    android:contentDescription="@string/earrings" />
 
                                 <ImageView
                                     android:id="@+id/btnFav3"
@@ -247,7 +247,7 @@
                                     android:layout_gravity="top|end"
                                     android:layout_margin="8dp"
                                     android:src="@drawable/favoriteda"
-                                    android:contentDescription="Favorite"
+                                    android:contentDescription="@string/favorite"
                                     android:clickable="true"
                                     android:focusable="true" />
                             </FrameLayout>
@@ -257,9 +257,9 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Earrings Luna"
+                            android:text="@string/item3_name"
                             android:fontFamily="serif"
-                            android:textColor="#111111"
+                            android:textColor="@color/text_primary"
                             android:textSize="12sp"
                             android:layout_marginTop="6dp"
                             android:gravity="center" />
@@ -267,16 +267,16 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="4.8 (76 reviews)"
-                            android:textColor="#111111"
+                            android:text="@string/item3_reviews"
+                            android:textColor="@color/text_primary"
                             android:textSize="12sp"
                             android:gravity="center" />
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="EGP 999.00"
-                            android:textColor="#111111"
+                            android:text="@string/item3_price"
+                            android:textColor="@color/text_primary"
                             android:textSize="12sp"
                             android:gravity="center" />
                     </LinearLayout>
@@ -284,169 +284,163 @@
                 </LinearLayout>
             </HorizontalScrollView>
 
-                <!-- Categories -->
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Categories"
-                    android:textSize="22sp"
-                    android:fontFamily="serif"
-                    android:textColor="#111111"
-                    android:gravity="center"
-                    android:layout_marginTop="18dp"
-                    android:layout_marginBottom="10dp" />
+            <!-- Categories -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/categories"
+                android:textSize="22sp"
+                android:fontFamily="serif"
+                android:textColor="@color/text_primary"
+                android:gravity="center"
+                android:layout_marginTop="18dp"
+                android:layout_marginBottom="10dp" />
 
-                <TableLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingStart="12dp"
-                    android:paddingEnd="12dp"
-                    android:paddingBottom="18dp"
-                    android:stretchColumns="*">
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:paddingBottom="18dp"
+                android:stretchColumns="*">
 
-                    <!-- Row 1 -->
-                    <TableRow>
+                <TableRow>
 
-                        <!-- Necklaces -->
-                        <LinearLayout
-                            android:layout_width="0dp"
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_margin="4dp"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="190dp"
+                            app:cardCornerRadius="0dp"
+                            app:cardElevation="6dp"
+                            app:cardUseCompatPadding="false">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/necklace_categ"
+                                android:contentDescription="@string/necklaces" />
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:layout_margin="4dp"
-                            android:orientation="vertical">
+                            android:text="@string/necklaces"
+                            android:textColor="@color/text_primary"
+                            android:textSize="18sp"
+                            android:gravity="center"
+                            android:layout_marginTop="6dp" />
+                    </LinearLayout>
 
-                            <androidx.cardview.widget.CardView
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_margin="4dp"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="190dp"
+                            app:cardCornerRadius="0dp"
+                            app:cardElevation="6dp"
+                            app:cardUseCompatPadding="false">
+
+                            <ImageView
                                 android:layout_width="match_parent"
-                                android:layout_height="190dp"
-                                app:cardCornerRadius="0dp"
-                                app:cardElevation="6dp"
-                                app:cardUseCompatPadding="false">
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/ring_categ"
+                                android:contentDescription="@string/rings" />
+                        </androidx.cardview.widget.CardView>
 
-                                <ImageView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:scaleType="centerCrop"
-                                    android:src="@drawable/necklace_categ"
-                                    android:contentDescription="Necklaces" />
-                            </androidx.cardview.widget.CardView>
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Necklaces"
-                                android:textColor="#111111"
-                                android:textSize="18sp"
-                                android:gravity="center"
-                                android:layout_marginTop="6dp" />
-                        </LinearLayout>
-
-                        <!-- Rings -->
-                        <LinearLayout
-                            android:layout_width="0dp"
+                        <TextView
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:layout_margin="4dp"
-                            android:orientation="vertical">
+                            android:text="@string/rings"
+                            android:textColor="@color/text_primary"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:layout_marginTop="6dp" />
+                    </LinearLayout>
 
-                            <androidx.cardview.widget.CardView
+                </TableRow>
+
+                <TableRow>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_margin="4dp"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="190dp"
+                            app:cardCornerRadius="0dp"
+                            app:cardElevation="6dp"
+                            app:cardUseCompatPadding="false">
+
+                            <ImageView
                                 android:layout_width="match_parent"
-                                android:layout_height="190dp"
-                                app:cardCornerRadius="0dp"
-                                app:cardElevation="6dp"
-                                app:cardUseCompatPadding="false">
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/earrings_categ"
+                                android:contentDescription="@string/earrings" />
+                        </androidx.cardview.widget.CardView>
 
-                                <ImageView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:scaleType="centerCrop"
-                                    android:src="@drawable/ring_categ"
-                                    android:contentDescription="Rings" />
-                            </androidx.cardview.widget.CardView>
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Rings"
-                                android:textColor="#111111"
-                                android:textStyle="bold"
-                                android:gravity="center"
-                                android:layout_marginTop="6dp" />
-                        </LinearLayout>
-
-                    </TableRow>
-
-                    <!-- Row 2 -->
-                    <TableRow>
-
-                        <!-- Earrings -->
-                        <LinearLayout
-                            android:layout_width="0dp"
+                        <TextView
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:layout_margin="4dp"
-                            android:orientation="vertical">
+                            android:text="@string/earrings"
+                            android:textColor="@color/text_primary"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:layout_marginTop="6dp" />
+                    </LinearLayout>
 
-                            <androidx.cardview.widget.CardView
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_margin="4dp"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="190dp"
+                            app:cardCornerRadius="0dp"
+                            app:cardElevation="6dp"
+                            app:cardUseCompatPadding="false">
+
+                            <ImageView
                                 android:layout_width="match_parent"
-                                android:layout_height="190dp"
-                                app:cardCornerRadius="0dp"
-                                app:cardElevation="6dp"
-                                app:cardUseCompatPadding="false">
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/sets_categ"
+                                android:contentDescription="@string/sets" />
+                        </androidx.cardview.widget.CardView>
 
-                                <ImageView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:scaleType="centerCrop"
-                                    android:src="@drawable/earrings_categ"
-                                    android:contentDescription="Earrings" />
-                            </androidx.cardview.widget.CardView>
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Earrings"
-                                android:textColor="#111111"
-                                android:textStyle="bold"
-                                android:gravity="center"
-                                android:layout_marginTop="6dp" />
-                        </LinearLayout>
-
-                        <!-- Sets -->
-                        <LinearLayout
-                            android:layout_width="0dp"
+                        <TextView
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:layout_margin="4dp"
-                            android:orientation="vertical">
+                            android:text="@string/sets"
+                            android:textColor="@color/text_primary"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:layout_marginTop="6dp" />
+                    </LinearLayout>
 
-                            <androidx.cardview.widget.CardView
-                                android:layout_width="match_parent"
-                                android:layout_height="190dp"
-                                app:cardCornerRadius="0dp"
-                                app:cardElevation="6dp"
-                                app:cardUseCompatPadding="false">
+                </TableRow>
 
-                                <ImageView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:scaleType="centerCrop"
-                                    android:src="@drawable/sets_categ"
-                                    android:contentDescription="Sets" />
-                            </androidx.cardview.widget.CardView>
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Sets"
-                                android:textColor="#111111"
-                                android:textStyle="bold"
-                                android:gravity="center"
-                                android:layout_marginTop="6dp" />
-                        </LinearLayout>
-
-                    </TableRow>
-
-                </TableLayout>
+            </TableLayout>
 
         </LinearLayout>
     </ScrollView>

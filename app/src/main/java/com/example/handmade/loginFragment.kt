@@ -25,7 +25,6 @@ class LoginFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // عدلي الـ IDs دول لو أسماء الحقول عندك مختلفة في login_page.xml
         val etUsername = view.findViewById<EditText>(R.id.etUsername)
         val etPassword = view.findViewById<EditText>(R.id.etPassword)
         val btnLogin = view.findViewById<MaterialButton>(R.id.btnLogin)
@@ -51,12 +50,15 @@ class LoginFragment : Fragment() {
                     return@launch
                 }
 
-                // ✅ هنا الإضافة المطلوبة (من غير ما نبوّظ حاجة)
+                // ✅ حفظ userId + username
                 val prefs = requireContext().getSharedPreferences("auth", android.content.Context.MODE_PRIVATE)
                 prefs.edit()
-                    .putInt("userId", user.id)          // ✅ مهم للفيفوريت/الويشليست
-                    .putString("username", user.name)   // ✅ الاسم اللي هيظهر في Settings
+                    .putInt("userId", user.id)
+                    .putString("username", user.name)
                     .apply()
+
+                // ✅ تأكيد سريع (اختياري)
+                Toast.makeText(requireContext(), "Logged in: ${user.name} (id=${user.id})", Toast.LENGTH_SHORT).show()
 
                 findNavController().navigate(R.id.homeFragment)
             }

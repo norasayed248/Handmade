@@ -40,12 +40,61 @@
 
     <!--TODO: Remove or change this placeholder text-->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="guest">ضيف</string>
+    <string name="notification">الإشعارات</string>
+    <string name="display">العرض</string>
+    <string name="system_light">فاتح</string>
+    <string name="system_dark">داكن</string>
+    <string name="privacy">الخصوصية</string>
+    <string name="payment">الدفع</string>
+    <string name="help">المساعدة</string>
+    <string name="logout">تسجيل الخروج</string>
+    <string name="go">انتقال</string>
+    <string name="expand">توسيع</string>
+    <string name="light">فاتح</string>
+    <string name="dark">داكن</string>
+    <string name="Profile">الملف الشخصي</string>
+    <string name="back">الرجوع</string>
+    <string name="settings">الاعدادت</string>
+    <string name="language">اللغه</string>
+    <string name="English">الإنجليزيه</string>
+    <string name="Arabic">العربيه</string>
 
-    <string name="settings">الإعدادات</string>
-    <string name="language">اللغة</string>
-    <string name="english">الإنجليزية</string>
     <string name="arabic">العربية</string>
-    <string name="back">رجوع</string>
-    <string name="profile">الملف الشخصي</string>
+    <string name="english">الإنجليزية</string>
+    <string name="choose_language">اختر اللغة</string>
 
-</resources>
+
+        <string name="hero">صورة الهيرو</string>
+        <string name="aura_logo">شعار AURA</string>
+        <string name="tagline">علامة لمجوهرات هاند ميد مصنوعة في مصر</string>
+
+        <string name="best_sellers">الأكثر مبيعًا</string>
+        <string name="categories">التصنيفات</string>
+
+        <string name="favorite">مفضلة</string>
+
+        <string name="choker">شوكر</string>
+        <string name="ring">خاتم</string>
+        <string name="earrings">أقراط</string>
+
+        <string name="item1_name">شوكر مونيكا</string>
+        <string name="item1_reviews">5.0 (92 مراجعة)</string>
+        <string name="item1_price">1499.00 جنيه</string>
+
+        <string name="item2_name">خاتم قلب</string>
+        <string name="item2_reviews">4.9 (114 مراجعة)</string>
+        <string name="item2_price">1299.00 جنيه</string>
+
+        <string name="item3_name">أقراط لونا</string>
+        <string name="item3_reviews">4.8 (76 مراجعة)</string>
+        <string name="item3_price">999.00 جنيه</string>
+
+        <string name="necklaces">سلاسل</string>
+        <string name="rings">خواتم</string>
+        <string name="sets">أطقم</string>
+    </resources>
+
+
+
+

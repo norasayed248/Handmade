@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#EFE8E7"
+    android:background="@color/settings_bg"
     android:paddingTop="16dp">
 
     <!-- Back arrow (using arrow_down rotated to look like back) -->
@@ -25,7 +25,7 @@
         android:layout_height="wrap_content"
         android:text="@string/settings"
         android:textSize="30sp"
-        android:textColor="#2B2B2B"
+        android:textColor="@color/text_primary"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
@@ -53,10 +53,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="58dp"
                 android:layout_marginTop="8dp"
-                android:backgroundTint="#F3EFEF"
+                android:backgroundTint="@color/card_bg"
                 app:cardCornerRadius="14dp"
                 app:cardElevation="0dp"
-                app:strokeColor="#D8D2D1"
+                app:strokeColor="@color/card_stroke"
                 app:strokeWidth="1dp">
 
                 <LinearLayout
@@ -70,15 +70,15 @@
                     <ImageView
                         android:layout_width="26dp"
                         android:layout_height="26dp"
-                        android:contentDescription="@string/profile"
+                        android:contentDescription="@string/Profile"
                         app:srcCompat="@drawable/profile" />
 
                     <TextView
                         android:id="@+id/tvUserName"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Guest"
-                        android:textColor="#2B2B2B"
+                        android:text="@string/guest"
+                        android:textColor="@color/text_primary"
                         android:textSize="20sp"
                         android:padding="16dp"/>
 
@@ -101,22 +101,22 @@
                     android:layout_width="22dp"
                     android:layout_height="22dp"
                     app:srcCompat="@drawable/notification"
-                    android:contentDescription="Notification"/>
+                    android:contentDescription="@string/notification"/>
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:layout_marginStart="16dp"
-                    android:text="Notification"
+                    android:text="@string/notification"
                     android:textSize="20sp"
-                    android:textColor="#2B2B2B"/>
+                    android:textColor="@color/text_primary"/>
 
                 <ImageView
                     android:layout_width="22dp"
                     android:layout_height="22dp"
                     app:srcCompat="@drawable/arrow_right"
-                    android:contentDescription="Go"/>
+                    android:contentDescription="@string/go"/>
             </LinearLayout>
 
             <!-- Display (expand) -->
@@ -130,22 +130,22 @@
                     android:layout_width="22dp"
                     android:layout_height="22dp"
                     app:srcCompat="@drawable/display"
-                    android:contentDescription="Display"/>
+                    android:contentDescription="@string/display"/>
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:layout_marginStart="16dp"
-                    android:text="Display"
+                    android:text="@string/display"
                     android:textSize="20sp"
-                    android:textColor="#2B2B2B"/>
+                    android:textColor="@color/text_primary"/>
 
                 <ImageView
                     android:layout_width="22dp"
                     android:layout_height="22dp"
                     app:srcCompat="@drawable/arrow_down"
-                    android:contentDescription="Expand"/>
+                    android:contentDescription="@string/expand"/>
             </LinearLayout>
 
             <!-- Expanded options under Display -->
@@ -167,15 +167,15 @@
                         android:layout_width="20dp"
                         android:layout_height="20dp"
                         app:srcCompat="@drawable/sun"
-                        android:contentDescription="Light"/>
+                        android:contentDescription="@string/light"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="14dp"
-                        android:text="System Light"
+                        android:text="@string/system_light"
                         android:textSize="18sp"
-                        android:textColor="#2B2B2B"/>
+                        android:textColor="@color/text_primary"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -188,15 +188,15 @@
                         android:layout_width="20dp"
                         android:layout_height="20dp"
                         app:srcCompat="@drawable/moon"
-                        android:contentDescription="Dark"/>
+                        android:contentDescription="@string/dark"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="14dp"
-                        android:text="System Dark"
+                        android:text="@string/system_dark"
                         android:textSize="18sp"
-                        android:textColor="#2B2B2B"/>
+                        android:textColor="@color/text_primary"/>
                 </LinearLayout>
 
             </LinearLayout>
@@ -212,22 +212,22 @@
                     android:layout_width="22dp"
                     android:layout_height="22dp"
                     app:srcCompat="@drawable/lock"
-                    android:contentDescription="Privacy"/>
+                    android:contentDescription="@string/privacy"/>
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:layout_marginStart="16dp"
-                    android:text="Privacy"
+                    android:text="@string/privacy"
                     android:textSize="20sp"
-                    android:textColor="#2B2B2B"/>
+                    android:textColor="@color/text_primary"/>
 
                 <ImageView
                     android:layout_width="22dp"
                     android:layout_height="22dp"
                     app:srcCompat="@drawable/arrow_right"
-                    android:contentDescription="Go"/>
+                    android:contentDescription="@string/go"/>
             </LinearLayout>
 
             <!-- Payment -->
@@ -241,22 +241,22 @@
                     android:layout_width="22dp"
                     android:layout_height="22dp"
                     app:srcCompat="@drawable/credit"
-                    android:contentDescription="Payment"/>
+                    android:contentDescription="@string/payment"/>
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:layout_marginStart="16dp"
-                    android:text="Payment"
+                    android:text="@string/payment"
                     android:textSize="20sp"
-                    android:textColor="#2B2B2B"/>
+                    android:textColor="@color/text_primary"/>
 
                 <ImageView
                     android:layout_width="22dp"
                     android:layout_height="22dp"
                     app:srcCompat="@drawable/arrow_right"
-                    android:contentDescription="Go"/>
+                    android:contentDescription="@string/go"/>
             </LinearLayout>
 
             <!-- Language -->
@@ -283,13 +283,13 @@
                     android:layout_marginStart="16dp"
                     android:text="@string/language"
                     android:textSize="20sp"
-                    android:textColor="#2B2B2B"/>
+                    android:textColor="@color/text_primary"/>
 
                 <ImageView
                     android:layout_width="22dp"
                     android:layout_height="22dp"
                     app:srcCompat="@drawable/arrow_right"
-                    android:contentDescription="Go"/>
+                    android:contentDescription="@string/go"/>
             </LinearLayout>
 
             <!-- Help -->
@@ -303,22 +303,22 @@
                     android:layout_width="22dp"
                     android:layout_height="22dp"
                     app:srcCompat="@drawable/help"
-                    android:contentDescription="Help"/>
+                    android:contentDescription="@string/help"/>
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:layout_marginStart="16dp"
-                    android:text="Help"
+                    android:text="@string/help"
                     android:textSize="20sp"
-                    android:textColor="#2B2B2B"/>
+                    android:textColor="@color/text_primary"/>
 
                 <ImageView
                     android:layout_width="22dp"
                     android:layout_height="22dp"
                     app:srcCompat="@drawable/arrow_right"
-                    android:contentDescription="Go"/>
+                    android:contentDescription="@string/go"/>
             </LinearLayout>
 
             <!-- Logout -->
@@ -332,22 +332,22 @@
                     android:layout_width="22dp"
                     android:layout_height="22dp"
                     app:srcCompat="@drawable/logout"
-                    android:contentDescription="Logout"/>
+                    android:contentDescription="@string/logout"/>
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:layout_marginStart="16dp"
-                    android:text="Logout"
+                    android:text="@string/logout"
                     android:textSize="20sp"
-                    android:textColor="#2B2B2B"/>
+                    android:textColor="@color/text_primary"/>
 
                 <ImageView
                     android:layout_width="22dp"
                     android:layout_height="22dp"
                     app:srcCompat="@drawable/arrow_right"
-                    android:contentDescription="Go"/>
+                    android:contentDescription="@string/go"/>
             </LinearLayout>
 
         </LinearLayout>
