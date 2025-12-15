@@ -4,22 +4,49 @@ import com.example.handmade.data.database.AppDatabase
 import com.example.handmade.data.entities.FavouriteEntity
 import com.example.handmade.data.entities.ProductEntity
 import com.example.handmade.data.entities.UserEntity
-import kotlinx.coroutines.flow.Flow
 
 class MainRepository(private val db: AppDatabase) {
 
     // -------------------------
     // Users (USERNAME + PASSWORD)
     // -------------------------
+
     suspend fun insertUser(user: UserEntity) {
         db.userDao().insertUser(user)
     }
 
-
-
-    suspend fun login(username: String, password: String): UserEntity? {
-        return db.userDao().getUserByNameAndPassword(username, password)
+    suspend fun getUserByName(name: String): UserEntity? {
+        return db.userDao().getUserByName(name)
     }
+
+    // ✅ Login by username + password
+    suspend fun login(username: String, password: String): UserEntity? {
+        return db.userDao().getUserByName(username)
+    }
+
+    // ✅ Signup by username (من غير تكرار)
+    // ✅ Signup (username + email + password) + منع التكرار
+    suspend fun signup(username: String, email: String, password: String): Boolean {
+
+        // يمنع تكرار اليوزرنيم
+        val existingName = db.userDao().getUserByName(username)
+        if (existingName != null) return false
+
+        // يمنع تكرار الإيميل
+        val existingEmail = db.userDao().getUserByEmail(email)
+        if (existingEmail != null) return false
+
+        db.userDao().insertUser(
+            UserEntity(
+                name = username,
+                email = email,
+                password = password
+            )
+        )
+        return true
+    }
+
+
 
     // -------------------------
     // Products
@@ -54,11 +81,4 @@ class MainRepository(private val db: AppDatabase) {
     suspend fun getUserFavourites(userId: Int): List<FavouriteEntity> {
         return db.favouriteDao().getUserFavourites(userId)
     }
-
-    fun observeUserFavourites(userId: Int): Flow<List<FavouriteEntity>> {
-        return db.favouriteDao().observeUserFavourites(userId)
-    }
-    fun observeWishlistProducts(userId: Int) =
-        db.favouriteDao().observeWishlistProducts(userId)
-
 }

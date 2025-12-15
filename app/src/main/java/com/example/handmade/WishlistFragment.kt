@@ -41,25 +41,24 @@ class WishlistFragment : Fragment() {
         }
 
         viewLifecycleOwner.lifecycleScope.launch {
-            viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
-                repo.observeUserFavourites(userId).collect { favList ->
-                    ll.removeAllViews()
 
-                    if (favList.isEmpty()) {
-                        ll.addView(TextView(requireContext()).apply { text = "Wishlist is empty" })
-                        return@collect
-                    }
+            val favList = repo.getUserFavourites(userId)
 
-                    favList.forEach { fav ->
-                        ll.addView(TextView(requireContext()).apply {
-                            text = "ProductId: ${fav.productId}"
-                            textSize = 16f
-                        })
-                    }
-                }
+            ll.removeAllViews()
+
+            if (favList.isEmpty()) {
+                ll.addView(TextView(requireContext()).apply { text = "Wishlist is empty" })
+                return@launch
+            }
+
+            favList.forEach { fav ->
+                ll.addView(TextView(requireContext()).apply {
+                    text = "ProductId: ${fav.productId}"   // لو productId أحمر شوفي تحت
+                    textSize = 16f
+                })
             }
         }
-    }
-    }
 
+    }
+}
 

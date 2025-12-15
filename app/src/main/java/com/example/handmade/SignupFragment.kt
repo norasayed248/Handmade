@@ -41,31 +41,36 @@ class SignupFragment : Fragment() {
             val confirm = etConfirm.text.toString()
 
             if (name.isEmpty() || email.isEmpty() || pass.isEmpty() || confirm.isEmpty()) {
-                Toast.makeText(requireContext(), "Please fill all fields", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), "Please fill all fields", Toast.LENGTH_SHORT)
+                    .show()
                 return@setOnClickListener
             }
 
             if (pass != confirm) {
-                Toast.makeText(requireContext(), "Passwords not matching", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), "Passwords not matching", Toast.LENGTH_SHORT)
+                    .show()
                 return@setOnClickListener
             }
 
             viewLifecycleOwner.lifecycleScope.launch {
-                // لو انت ضفت signup() في MainRepository استخدمها (أفضل عشان يمنع تكرار الإيميل)
-                val ok = try {
-                    repo.signup(UserEntity(name = name, password = pass))
-                } catch (e: Exception) {
-                    false
-                }
+                val ok = repo.signup(
+                    username = name,
+                    email = email,
+                    password = pass
+                )
 
                 if (ok) {
                     Toast.makeText(requireContext(), "Account created", Toast.LENGTH_SHORT).show()
-                    // بعد التسجيل نرجّع المستخدم للّوجين
                     findNavController().navigate(R.id.loginFragment)
                 } else {
-                    Toast.makeText(requireContext(), "Email already exists (or error)", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(
+                        requireContext(),
+                        "Username or Email already exists",
+                        Toast.LENGTH_SHORT
+                    ).show()
                 }
             }
+
         }
     }
 }
