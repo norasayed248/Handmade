@@ -30,7 +30,7 @@
 
     <fragment
         android:id="@+id/settingsFragment"
-        android:name="com.example.handmade.SettingsFragment"
+        android:name="com.example.handmade.SettingFragment"
         android:label="Settings" />
 
 </navigation>
